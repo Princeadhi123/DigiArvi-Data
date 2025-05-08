@@ -1,0 +1,311 @@
+CPFQ Factor Analysis Results
+===========================
+
+Generated on: 2025-05-09 02:07:36.415563
+
+Missing Values Analysis
+==================================================
+
+1. Missing Values per Item:
+            Missing Count  Total Possible  Missing %  Available Responses
+cpfq_emo1              25            2367        1.1                 2342
+cpfq_emo2              33            2367        1.4                 2334
+cpfq_emo3              37            2367        1.6                 2330
+cpfq_emo4              42            2367        1.8                 2325
+cpfq_emo5             722            2367       30.5                 1645
+cpfq_emo6              52            2367        2.2                 2315
+cpfq_emo7              48            2367        2.0                 2319
+cpfq_emo8             222            2367        9.4                 2145
+cpfq_emo9              42            2367        1.8                 2325
+cpfq_emo10             63            2367        2.7                 2304
+cpfq_emo11             67            2367        2.8                 2300
+cpfq_emo12            198            2367        8.4                 2169
+cpfq_emo13             60            2367        2.5                 2307
+cpfq_emo14            732            2367       30.9                 1635
+cpfq_emo15            732            2367       30.9                 1635
+cpfq_emo16            717            2367       30.3                 1650
+cpfq_emo17            715            2367       30.2                 1652
+cpfq_emo18            715            2367       30.2                 1652
+
+2. Pairwise Complete Cases Analysis:
+
+All Pairs:
+cpfq_emo1 - cpfq_emo1: 2342 responses (98.9%)
+cpfq_emo1 - cpfq_emo2: 2331 responses (98.5%)
+cpfq_emo1 - cpfq_emo3: 2326 responses (98.3%)
+cpfq_emo1 - cpfq_emo4: 2321 responses (98.1%)
+cpfq_emo1 - cpfq_emo5: 1645 responses (69.5%)
+cpfq_emo1 - cpfq_emo6: 2311 responses (97.6%)
+cpfq_emo1 - cpfq_emo7: 2316 responses (97.8%)
+cpfq_emo1 - cpfq_emo8: 2141 responses (90.5%)
+cpfq_emo1 - cpfq_emo9: 2321 responses (98.1%)
+cpfq_emo1 - cpfq_emo10: 2300 responses (97.2%)
+cpfq_emo1 - cpfq_emo11: 2296 responses (97.0%)
+cpfq_emo1 - cpfq_emo12: 2165 responses (91.5%)
+cpfq_emo1 - cpfq_emo13: 2303 responses (97.3%)
+cpfq_emo1 - cpfq_emo14: 1635 responses (69.1%)
+cpfq_emo1 - cpfq_emo15: 1635 responses (69.1%)
+cpfq_emo1 - cpfq_emo16: 1650 responses (69.7%)
+cpfq_emo1 - cpfq_emo17: 1652 responses (69.8%)
+cpfq_emo1 - cpfq_emo18: 1652 responses (69.8%)
+cpfq_emo2 - cpfq_emo2: 2334 responses (98.6%)
+cpfq_emo2 - cpfq_emo3: 2321 responses (98.1%)
+cpfq_emo2 - cpfq_emo4: 2316 responses (97.8%)
+cpfq_emo2 - cpfq_emo5: 1641 responses (69.3%)
+cpfq_emo2 - cpfq_emo6: 2306 responses (97.4%)
+cpfq_emo2 - cpfq_emo7: 2310 responses (97.6%)
+cpfq_emo2 - cpfq_emo8: 2137 responses (90.3%)
+cpfq_emo2 - cpfq_emo9: 2317 responses (97.9%)
+cpfq_emo2 - cpfq_emo10: 2296 responses (97.0%)
+cpfq_emo2 - cpfq_emo11: 2292 responses (96.8%)
+cpfq_emo2 - cpfq_emo12: 2161 responses (91.3%)
+cpfq_emo2 - cpfq_emo13: 2298 responses (97.1%)
+cpfq_emo2 - cpfq_emo14: 1631 responses (68.9%)
+cpfq_emo2 - cpfq_emo15: 1631 responses (68.9%)
+cpfq_emo2 - cpfq_emo16: 1646 responses (69.5%)
+cpfq_emo2 - cpfq_emo17: 1648 responses (69.6%)
+cpfq_emo2 - cpfq_emo18: 1648 responses (69.6%)
+cpfq_emo3 - cpfq_emo3: 2330 responses (98.4%)
+cpfq_emo3 - cpfq_emo4: 2312 responses (97.7%)
+cpfq_emo3 - cpfq_emo5: 1638 responses (69.2%)
+cpfq_emo3 - cpfq_emo6: 2303 responses (97.3%)
+cpfq_emo3 - cpfq_emo7: 2307 responses (97.5%)
+cpfq_emo3 - cpfq_emo8: 2134 responses (90.2%)
+cpfq_emo3 - cpfq_emo9: 2313 responses (97.7%)
+cpfq_emo3 - cpfq_emo10: 2293 responses (96.9%)
+cpfq_emo3 - cpfq_emo11: 2289 responses (96.7%)
+cpfq_emo3 - cpfq_emo12: 2158 responses (91.2%)
+cpfq_emo3 - cpfq_emo13: 2295 responses (97.0%)
+cpfq_emo3 - cpfq_emo14: 1628 responses (68.8%)
+cpfq_emo3 - cpfq_emo15: 1629 responses (68.8%)
+cpfq_emo3 - cpfq_emo16: 1643 responses (69.4%)
+cpfq_emo3 - cpfq_emo17: 1645 responses (69.5%)
+cpfq_emo3 - cpfq_emo18: 1645 responses (69.5%)
+cpfq_emo4 - cpfq_emo4: 2325 responses (98.2%)
+cpfq_emo4 - cpfq_emo5: 1633 responses (69.0%)
+cpfq_emo4 - cpfq_emo6: 2298 responses (97.1%)
+cpfq_emo4 - cpfq_emo7: 2302 responses (97.3%)
+cpfq_emo4 - cpfq_emo8: 2129 responses (89.9%)
+cpfq_emo4 - cpfq_emo9: 2309 responses (97.5%)
+cpfq_emo4 - cpfq_emo10: 2289 responses (96.7%)
+cpfq_emo4 - cpfq_emo11: 2284 responses (96.5%)
+cpfq_emo4 - cpfq_emo12: 2153 responses (91.0%)
+cpfq_emo4 - cpfq_emo13: 2291 responses (96.8%)
+cpfq_emo4 - cpfq_emo14: 1625 responses (68.7%)
+cpfq_emo4 - cpfq_emo15: 1624 responses (68.6%)
+cpfq_emo4 - cpfq_emo16: 1639 responses (69.2%)
+cpfq_emo4 - cpfq_emo17: 1641 responses (69.3%)
+cpfq_emo4 - cpfq_emo18: 1641 responses (69.3%)
+cpfq_emo5 - cpfq_emo5: 1645 responses (69.5%)
+cpfq_emo5 - cpfq_emo6: 1624 responses (68.6%)
+cpfq_emo5 - cpfq_emo7: 1631 responses (68.9%)
+cpfq_emo5 - cpfq_emo8: 1480 responses (62.5%)
+cpfq_emo5 - cpfq_emo9: 1635 responses (69.1%)
+cpfq_emo5 - cpfq_emo10: 1621 responses (68.5%)
+cpfq_emo5 - cpfq_emo11: 1615 responses (68.2%)
+cpfq_emo5 - cpfq_emo12: 1485 responses (62.7%)
+cpfq_emo5 - cpfq_emo13: 1626 responses (68.7%)
+cpfq_emo5 - cpfq_emo14: 1616 responses (68.3%)
+cpfq_emo5 - cpfq_emo15: 1617 responses (68.3%)
+cpfq_emo5 - cpfq_emo16: 1631 responses (68.9%)
+cpfq_emo5 - cpfq_emo17: 1633 responses (69.0%)
+cpfq_emo5 - cpfq_emo18: 1633 responses (69.0%)
+cpfq_emo6 - cpfq_emo6: 2315 responses (97.8%)
+cpfq_emo6 - cpfq_emo7: 2295 responses (97.0%)
+cpfq_emo6 - cpfq_emo8: 2123 responses (89.7%)
+cpfq_emo6 - cpfq_emo9: 2300 responses (97.2%)
+cpfq_emo6 - cpfq_emo10: 2279 responses (96.3%)
+cpfq_emo6 - cpfq_emo11: 2276 responses (96.2%)
+cpfq_emo6 - cpfq_emo12: 2145 responses (90.6%)
+cpfq_emo6 - cpfq_emo13: 2283 responses (96.5%)
+cpfq_emo6 - cpfq_emo14: 1613 responses (68.1%)
+cpfq_emo6 - cpfq_emo15: 1614 responses (68.2%)
+cpfq_emo6 - cpfq_emo16: 1628 responses (68.8%)
+cpfq_emo6 - cpfq_emo17: 1630 responses (68.9%)
+cpfq_emo6 - cpfq_emo18: 1630 responses (68.9%)
+cpfq_emo7 - cpfq_emo7: 2319 responses (98.0%)
+cpfq_emo7 - cpfq_emo8: 2128 responses (89.9%)
+cpfq_emo7 - cpfq_emo9: 2305 responses (97.4%)
+cpfq_emo7 - cpfq_emo10: 2284 responses (96.5%)
+cpfq_emo7 - cpfq_emo11: 2280 responses (96.3%)
+cpfq_emo7 - cpfq_emo12: 2150 responses (90.8%)
+cpfq_emo7 - cpfq_emo13: 2287 responses (96.6%)
+cpfq_emo7 - cpfq_emo14: 1621 responses (68.5%)
+cpfq_emo7 - cpfq_emo15: 1621 responses (68.5%)
+cpfq_emo7 - cpfq_emo16: 1636 responses (69.1%)
+cpfq_emo7 - cpfq_emo17: 1638 responses (69.2%)
+cpfq_emo7 - cpfq_emo18: 1638 responses (69.2%)
+cpfq_emo8 - cpfq_emo8: 2145 responses (90.6%)
+cpfq_emo8 - cpfq_emo9: 2136 responses (90.2%)
+cpfq_emo8 - cpfq_emo10: 2119 responses (89.5%)
+cpfq_emo8 - cpfq_emo11: 2111 responses (89.2%)
+cpfq_emo8 - cpfq_emo12: 2122 responses (89.6%)
+cpfq_emo8 - cpfq_emo13: 2119 responses (89.5%)
+cpfq_emo8 - cpfq_emo14: 1474 responses (62.3%)
+cpfq_emo8 - cpfq_emo15: 1473 responses (62.2%)
+cpfq_emo8 - cpfq_emo16: 1488 responses (62.9%)
+cpfq_emo8 - cpfq_emo17: 1492 responses (63.0%)
+cpfq_emo8 - cpfq_emo18: 1490 responses (62.9%)
+cpfq_emo9 - cpfq_emo9: 2325 responses (98.2%)
+cpfq_emo9 - cpfq_emo10: 2295 responses (97.0%)
+cpfq_emo9 - cpfq_emo11: 2289 responses (96.7%)
+cpfq_emo9 - cpfq_emo12: 2158 responses (91.2%)
+cpfq_emo9 - cpfq_emo13: 2296 responses (97.0%)
+cpfq_emo9 - cpfq_emo14: 1627 responses (68.7%)
+cpfq_emo9 - cpfq_emo15: 1627 responses (68.7%)
+cpfq_emo9 - cpfq_emo16: 1642 responses (69.4%)
+cpfq_emo9 - cpfq_emo17: 1644 responses (69.5%)
+cpfq_emo9 - cpfq_emo18: 1644 responses (69.5%)
+cpfq_emo10 - cpfq_emo10: 2304 responses (97.3%)
+cpfq_emo10 - cpfq_emo11: 2270 responses (95.9%)
+cpfq_emo10 - cpfq_emo12: 2141 responses (90.5%)
+cpfq_emo10 - cpfq_emo13: 2279 responses (96.3%)
+cpfq_emo10 - cpfq_emo14: 1617 responses (68.3%)
+cpfq_emo10 - cpfq_emo15: 1616 responses (68.3%)
+cpfq_emo10 - cpfq_emo16: 1630 responses (68.9%)
+cpfq_emo10 - cpfq_emo17: 1633 responses (69.0%)
+cpfq_emo10 - cpfq_emo18: 1632 responses (68.9%)
+cpfq_emo11 - cpfq_emo11: 2300 responses (97.2%)
+cpfq_emo11 - cpfq_emo12: 2139 responses (90.4%)
+cpfq_emo11 - cpfq_emo13: 2275 responses (96.1%)
+cpfq_emo11 - cpfq_emo14: 1608 responses (67.9%)
+cpfq_emo11 - cpfq_emo15: 1607 responses (67.9%)
+cpfq_emo11 - cpfq_emo16: 1622 responses (68.5%)
+cpfq_emo11 - cpfq_emo17: 1625 responses (68.7%)
+cpfq_emo11 - cpfq_emo18: 1624 responses (68.6%)
+cpfq_emo12 - cpfq_emo12: 2169 responses (91.6%)
+cpfq_emo12 - cpfq_emo13: 2144 responses (90.6%)
+cpfq_emo12 - cpfq_emo14: 1477 responses (62.4%)
+cpfq_emo12 - cpfq_emo15: 1478 responses (62.4%)
+cpfq_emo12 - cpfq_emo16: 1492 responses (63.0%)
+cpfq_emo12 - cpfq_emo17: 1494 responses (63.1%)
+cpfq_emo12 - cpfq_emo18: 1493 responses (63.1%)
+cpfq_emo13 - cpfq_emo13: 2307 responses (97.5%)
+cpfq_emo13 - cpfq_emo14: 1621 responses (68.5%)
+cpfq_emo13 - cpfq_emo15: 1621 responses (68.5%)
+cpfq_emo13 - cpfq_emo16: 1635 responses (69.1%)
+cpfq_emo13 - cpfq_emo17: 1637 responses (69.2%)
+cpfq_emo13 - cpfq_emo18: 1637 responses (69.2%)
+cpfq_emo14 - cpfq_emo14: 1635 responses (69.1%)
+cpfq_emo14 - cpfq_emo15: 1612 responses (68.1%)
+cpfq_emo14 - cpfq_emo16: 1626 responses (68.7%)
+cpfq_emo14 - cpfq_emo17: 1628 responses (68.8%)
+cpfq_emo14 - cpfq_emo18: 1628 responses (68.8%)
+cpfq_emo15 - cpfq_emo15: 1635 responses (69.1%)
+cpfq_emo15 - cpfq_emo16: 1626 responses (68.7%)
+cpfq_emo15 - cpfq_emo17: 1628 responses (68.8%)
+cpfq_emo15 - cpfq_emo18: 1628 responses (68.8%)
+cpfq_emo16 - cpfq_emo16: 1650 responses (69.7%)
+cpfq_emo16 - cpfq_emo17: 1643 responses (69.4%)
+cpfq_emo16 - cpfq_emo18: 1643 responses (69.4%)
+cpfq_emo17 - cpfq_emo17: 1652 responses (69.8%)
+cpfq_emo17 - cpfq_emo18: 1647 responses (69.6%)
+cpfq_emo18 - cpfq_emo18: 1652 responses (69.8%)
+
+Summary Statistics:
+Minimum pairs: 1473
+Maximum pairs: 2342
+Average pairs: 1906
+Median pairs: 1648
+
+Overall KMO score: 0.831
+
+KMO scores for each variable:
+cpfq_emo1: 0.863
+cpfq_emo2: 0.785
+cpfq_emo3: 0.896
+cpfq_emo4: 0.894
+cpfq_emo5: 0.786
+cpfq_emo6: 0.797
+cpfq_emo7: 0.823
+cpfq_emo8: 0.901
+cpfq_emo9: 0.842
+cpfq_emo10: 0.630
+cpfq_emo11: 0.811
+cpfq_emo12: 0.893
+cpfq_emo13: 0.812
+cpfq_emo14: 0.671
+cpfq_emo15: 0.883
+cpfq_emo16: 0.596
+cpfq_emo17: 0.872
+cpfq_emo18: 0.727
+
+Bartlett's test of sphericity:
+Chi-square: 8220.39
+p-value: 0.0000000000
+
+Factor Loadings:
+             Factor1   Factor2   Factor3   Factor4
+cpfq_emo1   0.833565  0.169720 -0.221118 -0.090934
+cpfq_emo2   0.936701  0.099719 -0.159216 -0.146078
+cpfq_emo3   0.658333  0.503142 -0.065815  0.076301
+cpfq_emo4   0.755067  0.406851 -0.142682  0.190579
+cpfq_emo5  -0.797518 -0.174504  0.029151  0.078595
+cpfq_emo6  -0.619787 -0.524947 -0.048317 -0.215295
+cpfq_emo7   0.240997  0.684326 -0.025786  0.090772
+cpfq_emo8   0.114115  0.510679  0.031540 -0.167108
+cpfq_emo9  -0.460352  0.120754  0.251806 -0.231897
+cpfq_emo10  0.013466  0.190570 -0.098073 -0.634608
+cpfq_emo11  0.162043  0.858210 -0.092810  0.024869
+cpfq_emo12 -0.403245 -0.501800  0.358367  0.092713
+cpfq_emo13 -0.303799  0.042485  0.769576  0.217014
+cpfq_emo14  0.024977  0.266244  0.382884  0.243397
+cpfq_emo15 -0.487075 -0.373129  0.577891  0.193055
+cpfq_emo16  0.040945  0.012805  0.193630  0.609243
+cpfq_emo17 -0.272490 -0.465165 -0.010602  0.268274
+cpfq_emo18  0.024903 -0.470660 -0.168281  0.111591
+
+Variance Explained (%):
+         Eigenvalue  Proportion of Variance  Cumulative Variance
+Factor1    6.693491               37.186059            37.186059
+Factor2    2.353497               13.074983            50.261042
+Factor3    1.992607               11.070039            61.331080
+Factor4    0.936264                5.201466            66.532546
+
+Factor Interpretations:
+===================
+
+Factor 1 - "Persistence & Values-Based Action" (37.19% of variance)
+This factor represents commitment to values, persistence in the face of challenges, and self-awareness.
+Strong positive indicators (sorted by loading strength):
+- cpfq_emo2: "When I fail, I try again so that I can do better" (0.94)
+- cpfq_emo1: "I try my best every day" (0.83)
+- cpfq_emo4: "I notice what I think and feel" (0.76)
+- cpfq_emo3: "There are things I really care about" (0.66)
+Strong negative indicators (sorted by loading strength):
+- cpfq_emo5: "I give up when things are too hard" (-0.80)
+- cpfq_emo6: "Nothing feels important to me" (-0.62)
+- cpfq_emo15: "If I get angry, it means I've ruined things" (-0.49)
+- cpfq_emo9: "Sometimes I don't notice what's happening around me or what people say" (-0.46)
+- cpfq_emo12: "If I do something bad, it means I'm a bad person" (-0.40)
+- cpfq_emo13: "I often worry about things I have done or have to do" (-0.30)
+
+Factor 2 - "Emotional Acceptance & Present Moment" (13.07% of variance)
+This factor captures acceptance of emotions, cognitive defusion, and present-moment awareness.
+Strong positive indicators (sorted by loading strength):
+- cpfq_emo11: "It's okay to feel angry" (0.86)
+- cpfq_emo7: "It's okay to be afraid" (0.68)
+- cpfq_emo8: "Just because I think something, it doesn't mean it's true" (0.51)
+- cpfq_emo3: "There are things I really care about" (0.50)
+- cpfq_emo4: "I notice what I think and feel" (0.41)
+Strong negative indicators (sorted by loading strength):
+- cpfq_emo6: "Nothing feels important to me" (-0.52)
+- cpfq_emo12: "If I do something bad, it means I'm a bad person" (-0.50)
+- cpfq_emo18: "Adults tell me what is important for me" (-0.47)
+- cpfq_emo17: "I am what others say I am" (-0.47)
+- cpfq_emo15: "If I get angry, it means I've ruined things" (-0.37)
+
+Factor 3 - "Experiential Avoidance" (11.07% of variance)
+This factor represents worrying, emotional fusion, and bodily awareness.
+Strong positive indicators (sorted by loading strength):
+- cpfq_emo13: "I often worry about things I have done or have to do" (0.77)
+- cpfq_emo15: "If I get angry, it means I've ruined things" (0.58)
+- cpfq_emo14: "I notice when my body feels different" (0.38)
+- cpfq_emo12: "If I do something bad, it means I'm a bad person" (0.36)
+
+Factor 4 - "Self-as-Context vs. Fusion" (5.20% of variance)
+This factor represents the balance between cognitive fusion and maintaining a stable sense of self.
+Strong positive indicators (sorted by loading strength):
+- cpfq_emo16: "My thoughts and feelings tell me what I should do" (0.61)
+Strong negative indicators (sorted by loading strength):
+- cpfq_emo10: "My thoughts do not control what I do" (-0.63)
