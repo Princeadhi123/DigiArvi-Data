@@ -1,7 +1,7 @@
 CPFQ Factor Analysis Results
 ===========================
 
-Generated on: 2025-05-09 02:07:36.415563
+Generated on: 2025-05-12 15:40:16.200875
 
 Missing Values Analysis
 ==================================================
@@ -236,24 +236,24 @@ p-value: 0.0000000000
 
 Factor Loadings:
              Factor1   Factor2   Factor3   Factor4
-cpfq_emo1   0.833565  0.169720 -0.221118 -0.090934
-cpfq_emo2   0.936701  0.099719 -0.159216 -0.146078
-cpfq_emo3   0.658333  0.503142 -0.065815  0.076301
-cpfq_emo4   0.755067  0.406851 -0.142682  0.190579
-cpfq_emo5  -0.797518 -0.174504  0.029151  0.078595
-cpfq_emo6  -0.619787 -0.524947 -0.048317 -0.215295
-cpfq_emo7   0.240997  0.684326 -0.025786  0.090772
-cpfq_emo8   0.114115  0.510679  0.031540 -0.167108
-cpfq_emo9  -0.460352  0.120754  0.251806 -0.231897
-cpfq_emo10  0.013466  0.190570 -0.098073 -0.634608
-cpfq_emo11  0.162043  0.858210 -0.092810  0.024869
-cpfq_emo12 -0.403245 -0.501800  0.358367  0.092713
-cpfq_emo13 -0.303799  0.042485  0.769576  0.217014
-cpfq_emo14  0.024977  0.266244  0.382884  0.243397
-cpfq_emo15 -0.487075 -0.373129  0.577891  0.193055
-cpfq_emo16  0.040945  0.012805  0.193630  0.609243
-cpfq_emo17 -0.272490 -0.465165 -0.010602  0.268274
-cpfq_emo18  0.024903 -0.470660 -0.168281  0.111591
+cpfq_emo1   0.832192 -0.161439 -0.041236 -0.000934
+cpfq_emo2   0.938757 -0.096723 -0.085050 -0.099045
+cpfq_emo3   0.642920  0.040601  0.047245  0.360370
+cpfq_emo4   0.753307 -0.007516  0.151738  0.244989
+cpfq_emo5  -0.935233 -0.106074  0.100810  0.106322
+cpfq_emo6  -0.625570 -0.167585 -0.161068 -0.376113
+cpfq_emo7   0.029923 -0.035595  0.128797  0.800421
+cpfq_emo8   0.017922  0.109499 -0.259981  0.561205
+cpfq_emo9  -0.514349  0.281532 -0.375380  0.212486
+cpfq_emo10  0.080144 -0.029935 -0.799257  0.034087
+cpfq_emo11 -0.024159 -0.047629  0.007483  0.895103
+cpfq_emo12 -0.239946  0.341138  0.048983 -0.539183
+cpfq_emo13 -0.126435  0.810146  0.068219 -0.052517
+cpfq_emo14  0.255588  0.730113  0.084991  0.109858
+cpfq_emo15 -0.317616  0.547492  0.104539 -0.384926
+cpfq_emo16  0.017036  0.219181  0.726281  0.115981
+cpfq_emo17 -0.312838 -0.165244  0.420489 -0.347374
+cpfq_emo18  0.157864 -0.226648  0.195581 -0.592705
 
 Variance Explained (%):
          Eigenvalue  Proportion of Variance  Cumulative Variance
@@ -270,42 +270,43 @@ This factor represents commitment to values, persistence in the face of challeng
 Strong positive indicators (sorted by loading strength):
 - cpfq_emo2: "When I fail, I try again so that I can do better" (0.94)
 - cpfq_emo1: "I try my best every day" (0.83)
-- cpfq_emo4: "I notice what I think and feel" (0.76)
-- cpfq_emo3: "There are things I really care about" (0.66)
+- cpfq_emo4: "I notice what I think and feel" (0.75)
+- cpfq_emo3: "There are things I really care about" (0.64)
 Strong negative indicators (sorted by loading strength):
-- cpfq_emo5: "I give up when things are too hard" (-0.80)
-- cpfq_emo6: "Nothing feels important to me" (-0.62)
-- cpfq_emo15: "If I get angry, it means I've ruined things" (-0.49)
-- cpfq_emo9: "Sometimes I don't notice what's happening around me or what people say" (-0.46)
-- cpfq_emo12: "If I do something bad, it means I'm a bad person" (-0.40)
-- cpfq_emo13: "I often worry about things I have done or have to do" (-0.30)
+- cpfq_emo5: "I give up when things are too hard" (-0.94)
+- cpfq_emo6: "Nothing feels important to me" (-0.63)
+- cpfq_emo9: "Sometimes I don't notice what's happening around me or what people say" (-0.51)
+- cpfq_emo15: "If I get angry, it means I've ruined things" (-0.32)
+- cpfq_emo17: "I am what others say I am" (-0.31)
 
-Factor 2 - "Emotional Acceptance & Present Moment" (13.07% of variance)
-This factor captures acceptance of emotions, cognitive defusion, and present-moment awareness.
+Factor 2 - "Emotional Awareness & Worry" (13.07% of variance)
+This factor represents heightened emotional/bodily awareness coupled with worry and self-judgment.
 Strong positive indicators (sorted by loading strength):
-- cpfq_emo11: "It's okay to feel angry" (0.86)
-- cpfq_emo7: "It's okay to be afraid" (0.68)
-- cpfq_emo8: "Just because I think something, it doesn't mean it's true" (0.51)
-- cpfq_emo3: "There are things I really care about" (0.50)
-- cpfq_emo4: "I notice what I think and feel" (0.41)
+- cpfq_emo13: "I often worry about things I have done or have to do" (0.81)
+- cpfq_emo14: "I notice when my body feels different" (0.73)
+- cpfq_emo15: "If I get angry, it means I've ruined things" (0.55)
+- cpfq_emo12: "If I do something bad, it means I'm a bad person" (0.34)
 Strong negative indicators (sorted by loading strength):
-- cpfq_emo6: "Nothing feels important to me" (-0.52)
-- cpfq_emo12: "If I do something bad, it means I'm a bad person" (-0.50)
-- cpfq_emo18: "Adults tell me what is important for me" (-0.47)
-- cpfq_emo17: "I am what others say I am" (-0.47)
-- cpfq_emo15: "If I get angry, it means I've ruined things" (-0.37)
 
-Factor 3 - "Experiential Avoidance" (11.07% of variance)
-This factor represents worrying, emotional fusion, and bodily awareness.
+Factor 3 - "Cognitive Fusion" (11.07% of variance)
+This factor represents the extent to which thoughts control behavior and identity.
 Strong positive indicators (sorted by loading strength):
-- cpfq_emo13: "I often worry about things I have done or have to do" (0.77)
-- cpfq_emo15: "If I get angry, it means I've ruined things" (0.58)
-- cpfq_emo14: "I notice when my body feels different" (0.38)
-- cpfq_emo12: "If I do something bad, it means I'm a bad person" (0.36)
-
-Factor 4 - "Self-as-Context vs. Fusion" (5.20% of variance)
-This factor represents the balance between cognitive fusion and maintaining a stable sense of self.
-Strong positive indicators (sorted by loading strength):
-- cpfq_emo16: "My thoughts and feelings tell me what I should do" (0.61)
+- cpfq_emo16: "My thoughts and feelings tell me what I should do" (0.73)
+- cpfq_emo17: "I am what others say I am" (0.42)
 Strong negative indicators (sorted by loading strength):
-- cpfq_emo10: "My thoughts do not control what I do" (-0.63)
+- cpfq_emo10: "My thoughts do not control what I do" (-0.80)
+- cpfq_emo9: "Sometimes I don't notice what's happening around me or what people say" (-0.38)
+
+Factor 4 - "Emotional Acceptance vs External Control" (5.20% of variance)
+This factor contrasts emotional acceptance with control by others and rigid rules.
+Strong positive indicators (sorted by loading strength):
+- cpfq_emo11: "It's okay to feel angry" (0.90)
+- cpfq_emo7: "It's okay to be afraid" (0.80)
+- cpfq_emo8: "Just because I think something, it doesn't mean it's true" (0.56)
+- cpfq_emo3: "There are things I really care about" (0.36)
+Strong negative indicators (sorted by loading strength):
+- cpfq_emo18: "Adults tell me what is important for me" (-0.59)
+- cpfq_emo12: "If I do something bad, it means I'm a bad person" (-0.54)
+- cpfq_emo15: "If I get angry, it means I've ruined things" (-0.38)
+- cpfq_emo6: "Nothing feels important to me" (-0.38)
+- cpfq_emo17: "I am what others say I am" (-0.35)

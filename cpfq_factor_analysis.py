@@ -346,7 +346,7 @@ def perform_factor_analysis(cpfq_data: pd.DataFrame, cpfq_cols: List[str]) -> st
         corr_matrix = get_correlation_matrix(cpfq_data)
         
         # Perform factor analysis with 4 factors
-        fa = FactorAnalyzer(rotation='varimax', n_factors=4)
+        fa = FactorAnalyzer(rotation='oblimin', n_factors=4, method='principal')
         fa.fit(corr_matrix)
         
         # Get factor loadings
@@ -491,8 +491,8 @@ def perform_factor_analysis(cpfq_data: pd.DataFrame, cpfq_cols: List[str]) -> st
             results.append(format_loading(item, loading))
         
         # Factor 2
-        results.append('\nFactor 2 - "Emotional Acceptance & Present Moment" (13.07% of variance)')
-        results.append('This factor captures acceptance of emotions, cognitive defusion, and present-moment awareness.')
+        results.append('\nFactor 2 - "Emotional Awareness & Worry" (13.07% of variance)')
+        results.append('This factor represents heightened emotional/bodily awareness coupled with worry and self-judgment.')
         results.append('Strong positive indicators (sorted by loading strength):')
         for item, loading in factor2_pos:
             results.append(format_loading(item, loading))
@@ -501,8 +501,8 @@ def perform_factor_analysis(cpfq_data: pd.DataFrame, cpfq_cols: List[str]) -> st
             results.append(format_loading(item, loading))
         
         # Factor 3
-        results.append('\nFactor 3 - "Experiential Avoidance" (11.07% of variance)')
-        results.append('This factor represents worrying, emotional fusion, and bodily awareness.')
+        results.append('\nFactor 3 - "Cognitive Fusion" (11.07% of variance)')
+        results.append('This factor represents the extent to which thoughts control behavior and identity.')
         results.append('Strong positive indicators (sorted by loading strength):')
         for item, loading in factor3_pos:
             results.append(format_loading(item, loading))
@@ -512,8 +512,8 @@ def perform_factor_analysis(cpfq_data: pd.DataFrame, cpfq_cols: List[str]) -> st
                 results.append(format_loading(item, loading))
         
         # Factor 4
-        results.append('\nFactor 4 - "Self-as-Context vs. Fusion" (5.20% of variance)')
-        results.append('This factor represents the balance between cognitive fusion and maintaining a stable sense of self.')
+        results.append('\nFactor 4 - "Emotional Acceptance vs External Control" (5.20% of variance)')
+        results.append('This factor contrasts emotional acceptance with control by others and rigid rules.')
         results.append('Strong positive indicators (sorted by loading strength):')
         for item, loading in factor4_pos:
             results.append(format_loading(item, loading))
