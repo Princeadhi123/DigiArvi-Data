@@ -26,7 +26,7 @@ from typing import Dict, Tuple, Any, List
 
 # Configuration
 RESULTS_DIR = 'results_cpfq'
-DATA_FILE = 'DigiArvi_data_for_writing_retreat_May_2025_v2.xlsx'
+DATA_FILE = 'CPFQ_REVERSED_USETHIS.xls'
 FIGURE_DPI = 300
 FIGURE_FORMAT = 'png'
 
@@ -62,7 +62,7 @@ def load_data() -> pd.DataFrame:
         Exception: For other errors during data loading
     """
     try:
-        df = pd.read_excel(DATA_FILE)
+        df = pd.read_excel(DATA_FILE, engine='xlrd')
         logging.info(f"Successfully loaded data from {DATA_FILE}")
         return df
     except FileNotFoundError:
@@ -83,7 +83,7 @@ def prepare_data(df: pd.DataFrame) -> Tuple[pd.DataFrame, List[str]]:
             - pd.DataFrame: The prepared CPFQ data
             - List[str]: List of CPFQ column names
     """
-    cpfq_cols = [col for col in df.columns if col.startswith('cpfq_emo')]
+    cpfq_cols = [col for col in df.columns if col.startswith('cpfq_') and col != 'cpfq_Time']
     cpfq_data = df[cpfq_cols].copy()
     return cpfq_data, cpfq_cols
 

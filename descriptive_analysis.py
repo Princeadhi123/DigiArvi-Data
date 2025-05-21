@@ -22,7 +22,7 @@ from typing import Dict, Tuple, Any
 
 # Configuration
 RESULTS_DIR = 'results_descriptive'
-DATA_FILE = 'DigiArvi_data_for_writing_retreat_May_2025_v2.xlsx'
+DATA_FILE = 'CPFQ_REVERSED_USETHIS.xls'
 FIGURE_DPI = 300
 FIGURE_FORMAT = 'png'
 
@@ -58,7 +58,7 @@ def load_data() -> pd.DataFrame:
         Exception: For other errors during data loading
     """
     try:
-        df = pd.read_excel(DATA_FILE)
+        df = pd.read_excel(DATA_FILE, engine='xlrd')
         logging.info(f"Successfully loaded data from {DATA_FILE}")
         return df
     except FileNotFoundError:
@@ -157,21 +157,16 @@ def create_correlation_heatmap(df: pd.DataFrame) -> None:
     Args:
         df: Input DataFrame containing variables for correlation analysis
     """
-    # Define variables of interest
+    # Select variables for correlation analysis
     selected_vars = [
-        'grade', 'sex', 'school_lang', 'home_lang', 'strong_lang', 'friend_lang',
-        'SCORE_SRF', 'SCORE_F3.2'
-    ] + [
-        f'cpfq_emo{i}' for i in range(1, 19)
-    ] + ['cpfq_Time']
+        'SCORE_SRF', 'SCORE_F3.2',  # Score variables
+        'T10_TOTAL_theta_25',  # T10 total score
+        'cpfq_1', 'cpfq_2', 'cpfq_3', 'cpfq_4', 'cpfq_7', 'cpfq_8', 'cpfq_10', 'cpfq_11', 'cpfq_14',
+        'cpfq_5_rev', 'cpfq_6_rev', 'cpfq_9_rev', 'cpfq_12_rev', 'cpfq_13_rev', 'cpfq_15_rev', 'cpfq_16_rev', 'cpfq_17_rev', 'cpfq_18_rev'
+    ]
     
     # Create a copy of the dataframe with selected variables
     df_selected = df[selected_vars].copy()
-    
-    # Convert categorical variables to numeric codes
-    categorical_vars = ['sex', 'school_lang', 'home_lang', 'strong_lang', 'friend_lang']
-    for col in categorical_vars:
-        df_selected[col] = pd.Categorical(df_selected[col]).codes
     
     # Calculate correlation matrix
     corr_matrix = df_selected.corr()
