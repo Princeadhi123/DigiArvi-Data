@@ -1,7 +1,7 @@
 CPFQ Factor Analysis Results
 ===========================
 
-Generated on: 2025-05-21 14:03:36.793662
+Generated on: 2025-05-21 14:39:19.990945
 
 Missing Values Analysis
 ==================================================
@@ -234,4 +234,85 @@ Bartlett's test of sphericity:
 Chi-square: 2243.64
 p-value: 0.0000000000
 
-None
+Factor Loadings:
+              Factor1   Factor2   Factor3   Factor4
+cpfq_1      -0.010037  0.809484  0.060613  0.041184
+cpfq_2       0.002491  0.909136  0.014625 -0.035594
+cpfq_3       0.113741  0.346253  0.099046  0.742018
+cpfq_4      -0.157412  0.576501  0.327190  0.354100
+cpfq_5_rev   0.353658  0.566778  0.152337 -0.204487
+cpfq_6_rev   0.350026  0.162056  0.552984  0.398583
+cpfq_7      -0.441679 -0.028761  0.053538  0.536813
+cpfq_8      -0.415737  0.089570 -0.229927  0.432519
+cpfq_9_rev   0.102692  0.193021  0.357882 -0.737212
+cpfq_10      0.046579  0.138937 -0.875711  0.192947
+cpfq_11     -0.204714 -0.076082 -0.036700  0.776409
+cpfq_12_rev  0.883425 -0.083025 -0.006300  0.172735
+cpfq_13_rev  0.709980  0.072873 -0.039352 -0.314488
+cpfq_14     -0.770103  0.119187  0.105808  0.144376
+cpfq_15_rev  0.856693  0.062454  0.097503  0.002476
+cpfq_16_rev  0.389183 -0.282078 -0.330972 -0.407918
+cpfq_17_rev  0.344598 -0.513203  0.180626 -0.042045
+cpfq_18_rev  0.078831 -0.793679  0.418507  0.038572
+
+Variance Explained (%):
+         Eigenvalue  Proportion of Variance  Cumulative Variance
+Factor1    6.544895               36.360526            36.360526
+Factor2    3.307709               18.376162            54.736688
+Factor3    1.748377                9.713204            64.449891
+Factor4    1.020339                5.668551            70.118442
+
+Factor Interpretations:
+===================
+
+Factor 1 - "Self-Judgment & Experiential Avoidance" (36.36% of variance)
+This factor represents fusion with self-critical thoughts (highest loading |0.883| for "If I do something bad, it means I'm a bad person") and emotional avoidance (|0.857| for "If I get angry, it means I've ruined things"), contrasting with mindful awareness (|-0.770| for "I notice when my body feels different").
+Strong positive indicators (sorted by loading strength):
+- cpfq_12_rev (|0.883|): 0.883 - "If I do something bad, it means I'm a bad person"
+- cpfq_15_rev (|0.857|): 0.857 - "If I get angry, it means I've ruined things"
+- cpfq_13_rev (|0.710|): 0.710 - "I often worry about things I have done or have to do"
+- cpfq_16_rev (|0.389|): 0.389 - "My thoughts and feelings tell me what I should do"
+- cpfq_5_rev (|0.354|): 0.354 - "I give up when things are too hard"
+- cpfq_6_rev (|0.350|): 0.350 - "Nothing feels important to me"
+- cpfq_17_rev (|0.345|): 0.345 - "I am what others say I am"
+Strong negative indicators (sorted by loading strength):
+- cpfq_14 (|0.770|): -0.770 - "I notice when my body feels different"
+- cpfq_7 (|0.442|): -0.442 - "It's okay to be afraid"
+- cpfq_8 (|0.416|): -0.416 - "Just because I think something, it doesn't mean it's true"
+
+Factor 2 - "Values-Based Action" (18.38% of variance)
+This factor strongly represents committed action (|0.909| for "When I fail, I try again", |0.809| for "I try my best every day"), contrasting with external control (|-0.794| for "Adults tell me what is important for me").
+Strong positive indicators (sorted by loading strength):
+- cpfq_2 (|0.909|): 0.909 - "When I fail, I try again so that I can do better"
+- cpfq_1 (|0.809|): 0.809 - "I try my best every day"
+- cpfq_4 (|0.577|): 0.577 - "I notice what I think and feel"
+- cpfq_5_rev (|0.567|): 0.567 - "I give up when things are too hard"
+- cpfq_3 (|0.346|): 0.346 - "There are things I really care about"
+Strong negative indicators (sorted by loading strength):
+- cpfq_18_rev (|0.794|): -0.794 - "Adults tell me what is important for me"
+- cpfq_17_rev (|0.513|): -0.513 - "I am what others say I am"
+
+Factor 3 - "Cognitive Defusion" (9.71% of variance)
+This factor primarily represents cognitive defusion (strongest negative loading |-0.876| for "My thoughts do not control what I do"), with positive loadings on experiential connection (|0.553| for "Nothing feels important to me" reversed).
+Strong positive indicators (sorted by loading strength):
+- cpfq_6_rev (|0.553|): 0.553 - "Nothing feels important to me"
+- cpfq_18_rev (|0.419|): 0.419 - "Adults tell me what is important for me"
+- cpfq_9_rev (|0.358|): 0.358 - "Sometimes I don't notice what's happening around me or what people say"
+- cpfq_4 (|0.327|): 0.327 - "I notice what I think and feel"
+Strong negative indicators (sorted by loading strength):
+- cpfq_10 (|0.876|): -0.876 - "My thoughts do not control what I do"
+- cpfq_16_rev (|0.331|): -0.331 - "My thoughts and feelings tell me what I should do"
+
+Factor 4 - "Emotional Acceptance & Present Moment" (5.67% of variance)
+This factor represents emotional acceptance (|0.776| for "It's okay to feel angry", |0.537| for "It's okay to be afraid") and values connection (|0.742| for "There are things I really care about"), contrasting with mindlessness (|-0.737| for "Sometimes I don't notice what's happening around me").
+Strong positive indicators (sorted by loading strength):
+- cpfq_11 (|0.776|): 0.776 - "It's okay to feel angry"
+- cpfq_3 (|0.742|): 0.742 - "There are things I really care about"
+- cpfq_7 (|0.537|): 0.537 - "It's okay to be afraid"
+- cpfq_8 (|0.433|): 0.433 - "Just because I think something, it doesn't mean it's true"
+- cpfq_6_rev (|0.399|): 0.399 - "Nothing feels important to me"
+- cpfq_4 (|0.354|): 0.354 - "I notice what I think and feel"
+Strong negative indicators (sorted by loading strength):
+- cpfq_9_rev (|0.737|): -0.737 - "Sometimes I don't notice what's happening around me or what people say"
+- cpfq_16_rev (|0.408|): -0.408 - "My thoughts and feelings tell me what I should do"
+- cpfq_13_rev (|0.314|): -0.314 - "I often worry about things I have done or have to do"

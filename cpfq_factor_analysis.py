@@ -438,7 +438,10 @@ def perform_factor_analysis(cpfq_data: pd.DataFrame, cpfq_cols: List[str]) -> st
         
         # Function to format loading
         def format_loading(item, loading):
-            return f'- {item}: "{item_texts[item]}" ({loading:.2f})'
+            abs_loading = abs(loading)
+            item_name = item.replace('_rev', '').replace('cpfq_', 'cpfq_emo')
+            desc = item_texts.get(item_name, item)
+            return f'- {item} (|{abs_loading:.3f}|): {loading:.3f} - "{desc}"'
 
         # Dictionary of item texts
         item_texts = {
@@ -481,8 +484,8 @@ def perform_factor_analysis(cpfq_data: pd.DataFrame, cpfq_cols: List[str]) -> st
         results.append('===================')
         
         # Factor 1
-        results.append('\nFactor 1 - "Persistence & Values-Based Action" (37.19% of variance)')
-        results.append('This factor represents commitment to values, persistence in the face of challenges, and self-awareness.')
+        results.append('\nFactor 1 - "Self-Judgment & Experiential Avoidance" (36.36% of variance)')
+        results.append('This factor represents fusion with self-critical thoughts (highest loading |0.883| for "If I do something bad, it means I\'m a bad person") and emotional avoidance (|0.857| for "If I get angry, it means I\'ve ruined things"), contrasting with mindful awareness (|-0.770| for "I notice when my body feels different").')
         results.append('Strong positive indicators (sorted by loading strength):')
         for item, loading in factor1_pos:
             results.append(format_loading(item, loading))
@@ -491,8 +494,8 @@ def perform_factor_analysis(cpfq_data: pd.DataFrame, cpfq_cols: List[str]) -> st
             results.append(format_loading(item, loading))
         
         # Factor 2
-        results.append('\nFactor 2 - "Emotional Awareness & Worry" (13.07% of variance)')
-        results.append('This factor represents heightened emotional/bodily awareness coupled with worry and self-judgment.')
+        results.append('\nFactor 2 - "Values-Based Action" (18.38% of variance)')
+        results.append('This factor strongly represents committed action (|0.909| for "When I fail, I try again", |0.809| for "I try my best every day"), contrasting with external control (|-0.794| for "Adults tell me what is important for me").')
         results.append('Strong positive indicators (sorted by loading strength):')
         for item, loading in factor2_pos:
             results.append(format_loading(item, loading))
@@ -501,8 +504,8 @@ def perform_factor_analysis(cpfq_data: pd.DataFrame, cpfq_cols: List[str]) -> st
             results.append(format_loading(item, loading))
         
         # Factor 3
-        results.append('\nFactor 3 - "Cognitive Fusion" (11.07% of variance)')
-        results.append('This factor represents the extent to which thoughts control behavior and identity.')
+        results.append('\nFactor 3 - "Cognitive Defusion" (9.71% of variance)')
+        results.append('This factor primarily represents cognitive defusion (strongest negative loading |-0.876| for "My thoughts do not control what I do"), with positive loadings on experiential connection (|0.553| for "Nothing feels important to me" reversed).')
         results.append('Strong positive indicators (sorted by loading strength):')
         for item, loading in factor3_pos:
             results.append(format_loading(item, loading))
@@ -512,8 +515,8 @@ def perform_factor_analysis(cpfq_data: pd.DataFrame, cpfq_cols: List[str]) -> st
                 results.append(format_loading(item, loading))
         
         # Factor 4
-        results.append('\nFactor 4 - "Emotional Acceptance vs External Control" (5.20% of variance)')
-        results.append('This factor contrasts emotional acceptance with control by others and rigid rules.')
+        results.append('\nFactor 4 - "Emotional Acceptance & Present Moment" (5.67% of variance)')
+        results.append('This factor represents emotional acceptance (|0.776| for "It\'s okay to feel angry", |0.537| for "It\'s okay to be afraid") and values connection (|0.742| for "There are things I really care about"), contrasting with mindlessness (|-0.737| for "Sometimes I don\'t notice what\'s happening around me").')
         results.append('Strong positive indicators (sorted by loading strength):')
         for item, loading in factor4_pos:
             results.append(format_loading(item, loading))
