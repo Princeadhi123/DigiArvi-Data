@@ -73,17 +73,42 @@ def load_data() -> pd.DataFrame:
         raise
 
 def prepare_data(df: pd.DataFrame) -> Tuple[pd.DataFrame, List[str]]:
-    """Prepare the CPFQ data by selecting relevant columns.
+    """Prepare the CPFQ data by selecting specific items (1, 2, 3, 4, 7, 11, 12, 13, and 15).
+    Takes into account reversed items (_rev suffix).
     
     Args:
         df: The loaded dataset
     
     Returns:
         Tuple containing:
-            - pd.DataFrame: The prepared CPFQ data
-            - List[str]: List of CPFQ column names
+            - pd.DataFrame: The prepared CPFQ data with selected items
+            - List[str]: List of selected CPFQ column names
     """
-    cpfq_cols = [col for col in df.columns if col.startswith('cpfq_') and col != 'cpfq_Time']
+    # Debug: print available columns
+    print("Available columns in dataset:")
+    cpfq_cols_available = [col for col in df.columns if col.startswith('cpfq_') and col != 'cpfq_Time']
+    print("CPFQ columns:", sorted(cpfq_cols_available))
+    
+    selected_items = [1, 2, 3, 4, 7, 11, 12, 13, 15]
+    cpfq_cols = []
+    
+    for item in selected_items:
+        base_col = f'cpfq_{item}'
+        rev_col = f'cpfq_{item}_rev'
+        
+        if base_col in df.columns:
+            cpfq_cols.append(base_col)
+        elif rev_col in df.columns:
+            cpfq_cols.append(rev_col)
+        else:
+            print(f"Warning: Neither {base_col} nor {rev_col} found in dataset")
+    
+    if not cpfq_cols:
+        raise ValueError("No requested CPFQ columns found in dataset")
+    
+    print("\nSelected columns for analysis:")
+    print(cpfq_cols)
+    
     cpfq_data = df[cpfq_cols].copy()
     return cpfq_data, cpfq_cols
 
@@ -249,9 +274,8 @@ def calculate_kmo(cpfq_data: pd.DataFrame, cpfq_cols: List[str]) -> str:
     for var, score in zip(cpfq_cols, kmo_all):
         results.append(f'{var}: {score:.3f}')
     
-    kmo_text = '\n'.join(results)
-    
-    return kmo_text
+    results_text = '\n'.join(results)
+    return results_text
 
 def perform_bartlett_test(cpfq_data: pd.DataFrame, cpfq_cols: List[str]) -> str:
     """Perform Bartlett's test of sphericity for the CPFQ data.
@@ -312,6 +336,43 @@ def create_scree_plot(cpfq_data: pd.DataFrame, cpfq_cols: List[str]) -> None:
     plt.tight_layout()
     plt.savefig(os.path.join(RESULTS_DIR, 'scree_plot.png'))
     plt.close()
+    
+def create_factor_importance_plot(fa: FactorAnalyzer) -> None:
+    """Create a factor importance plot showing variance explained by each factor.
+    
+    Args:
+        fa: The fitted FactorAnalyzer object
+    """
+    # Get variance explained
+    var_exp = fa.get_factor_variance()[1][:3] * 100
+    
+    # Create figure
+    plt.figure(figsize=(10, 6))
+    
+    # Create colors
+    colors = plt.cm.tab10(np.arange(3))
+    
+    # Create bar chart
+    bars = plt.bar(range(1, 4), var_exp, color=colors, alpha=0.7)
+    
+    # Add data labels
+    for bar in bars:
+        height = bar.get_height()
+        plt.text(bar.get_x() + bar.get_width()/2., height + 1,
+                 f'{height:.2f}%', ha='center', va='bottom', fontsize=12)
+    
+    # Add titles and labels
+    plt.title('Percentage of Variance Explained by Each Factor', fontsize=14, pad=20)
+    plt.xlabel('Factor Number', fontsize=12)
+    plt.ylabel('Variance Explained (%)', fontsize=12)
+    plt.xticks(range(1, 4))
+    plt.ylim(0, max(var_exp) * 1.2)
+    plt.grid(True, alpha=0.3)
+    plt.tight_layout()
+    
+    # Save figure
+    plt.savefig(os.path.join(RESULTS_DIR, 'factor_importance.png'))
+    plt.close()
 
 def get_correlation_matrix(cpfq_data: pd.DataFrame) -> pd.DataFrame:
     """Get the correlation matrix for the CPFQ data.
@@ -322,10 +383,9 @@ def get_correlation_matrix(cpfq_data: pd.DataFrame) -> pd.DataFrame:
     Returns:
         pd.DataFrame: The correlation matrix
     """
-    # Calculate correlation matrix using pairwise complete observations
-    corr_matrix = cpfq_data.corr(method='pearson', min_periods=1)
+    corr_matrix = cpfq_data.corr()
     
-    # Ensure correlation matrix is positive definite
+    # Check for negative eigenvalues
     min_eig = np.min(np.linalg.eigvals(corr_matrix))
     if min_eig < 0:
         # Add a small constant to the diagonal if needed
@@ -334,199 +394,129 @@ def get_correlation_matrix(cpfq_data: pd.DataFrame) -> pd.DataFrame:
     return corr_matrix
 
 def perform_factor_analysis(cpfq_data: pd.DataFrame, cpfq_cols: List[str]) -> str:
-    """Perform factor analysis on the CPFQ data.
-    
+    """Perform factor analysis on CPFQ data.
+
     Args:
-        cpfq_data: The prepared CPFQ data
-    
+        cpfq_data: DataFrame containing CPFQ data
+        cpfq_cols: List of column names to include in analysis
+
     Returns:
-        str: The factor analysis results as a string
+        str: Results of factor analysis
     """
     try:
         corr_matrix = get_correlation_matrix(cpfq_data)
         
-        # Perform factor analysis with 4 factors
-        fa = FactorAnalyzer(rotation='oblimin', n_factors=4, method='principal')
+        # Perform factor analysis with 3 factors
+        fa = FactorAnalyzer(rotation='oblimin', n_factors=3, method='principal')
         fa.fit(corr_matrix)
-        
+
         # Get factor loadings
         loadings = pd.DataFrame(
             fa.loadings_,
-            columns=[f'Factor{i+1}' for i in range(4)],
+            columns=[f'Factor{i+1}' for i in range(3)],
             index=cpfq_cols
         )
-        
-        print('\nFactor Loadings:')
-        print(loadings)
-        
+
         # Calculate variance explained
-        eigenvalues = fa.get_eigenvalues()[0]
-        total_var = sum(eigenvalues)
-        var_exp = eigenvalues[:4]
-        prop_var_exp = var_exp / total_var
-        cum_var_exp = np.cumsum(prop_var_exp)
-        
-        variance = pd.DataFrame({
-            'Eigenvalue': var_exp,
-            'Proportion of Variance': prop_var_exp * 100,
-            'Cumulative Variance': cum_var_exp * 100
-        }, index=[f'Factor{i+1}' for i in range(4)])
-        
-        print('\nVariance Explained (%):')        
-        print(variance)
-        
-        # Create factor correlation heatmap
-        plt.figure(figsize=(10, 8))
-        factor_scores = pd.DataFrame(
-            fa.transform(corr_matrix),
-            columns=[f'Factor {i+1}' for i in range(4)]
+        var_exp = fa.get_factor_variance()[1][:3] * 100
+        cum_var_exp = np.cumsum(var_exp)
+        eigenvalues = fa.get_eigenvalues()[0][:3]
+        variance = pd.DataFrame(
+            {
+                'Eigenvalue': eigenvalues,
+                'Proportion of Variance': var_exp,
+                'Cumulative Variance': cum_var_exp
+            }
         )
-        factor_corr = factor_scores.corr()
-        sns.heatmap(factor_corr, annot=True, cmap=HEATMAP_PALETTE, center=0, vmin=-1, vmax=1)
-        plt.title('Factor Correlations', fontsize=14, pad=15)
-        factor_labels = [f'Factor {i+1}' for i in range(4)]
-        plt.xticks(range(4), factor_labels, rotation=45, ha='right')
-        plt.yticks(range(4), factor_labels, rotation=0)
-        plt.tight_layout()
-        plt.savefig(os.path.join(RESULTS_DIR, 'factor_correlations.png'))
-        plt.close()
-        
-        # Create factor importance visualization
-        plt.figure(figsize=(12, 6))
-        
-        # Bar plot for variance explained
-        ax1 = plt.subplot(121)
-        colors = plt.cm.viridis(np.linspace(0, 0.8, 4))
-        bars = ax1.bar(range(1, 5), prop_var_exp * 100, color=colors)
-        ax1.set_xlabel('Factor', fontsize=12)
-        ax1.set_ylabel('Variance Explained (%)', fontsize=12)
-        ax1.set_title('Variance Explained by Each Factor', fontsize=14)
-        ax1.grid(True, alpha=0.3, axis='y')
-        
-        # Add value labels on top of bars
-        for bar in bars:
-            height = bar.get_height()
-            ax1.text(bar.get_x() + bar.get_width()/2., height,
-                    f'{height:.1f}%', ha='center', va='bottom', fontsize=10)
-        
-        # Add cumulative line
-        ax2 = ax1.twinx()
-        ax2.plot(range(1, 5), cum_var_exp * 100, 'r-', marker='o')
-        ax2.set_ylabel('Cumulative Variance (%)', color='r', fontsize=12)
-        ax2.tick_params(axis='y', labelcolor='r')
-        
-        plt.tight_layout()
-        plt.savefig(os.path.join(RESULTS_DIR, 'factor_importance.png'))
-        plt.close()
-        
-        # Create loadings heatmap
-        plt.figure(figsize=(12, 10))
-        sns.heatmap(loadings, annot=True, cmap=HEATMAP_PALETTE, center=0,
-                    vmin=-1, vmax=1, fmt='.2f', annot_kws={'size': 8})
-        plt.title('Factor Loadings Heatmap', fontsize=14, pad=20)
-        plt.xlabel('Factors', fontsize=12)
-        plt.ylabel('CPFQ Items', fontsize=12)
-        plt.tight_layout()
-        plt.savefig(os.path.join(RESULTS_DIR, 'factor_loadings_heatmap.png'))
-        plt.close()
-        
-        # Prepare text output with interpretations
-        results = ['Factor Loadings:']
+
+        # Format results
+        results = []
+        results.append('Factor Loadings:')
         results.append(loadings.to_string())
         results.append('\nVariance Explained (%):')
         results.append(variance.to_string())
         
-        # Function to format loading
-        def format_loading(item, loading):
-            abs_loading = abs(loading)
-            item_name = item.replace('_rev', '').replace('cpfq_', 'cpfq_emo')
-            desc = item_texts.get(item_name, item)
-            return f'- {item} (|{abs_loading:.3f}|): {loading:.3f} - "{desc}"'
-
-        # Dictionary of item texts
-        item_texts = {
-            'cpfq_emo1': 'I try my best every day',
-            'cpfq_emo2': 'When I fail, I try again so that I can do better',
-            'cpfq_emo3': 'There are things I really care about',
-            'cpfq_emo4': 'I notice what I think and feel',
-            'cpfq_emo5': 'I give up when things are too hard',
-            'cpfq_emo6': 'Nothing feels important to me',
-            'cpfq_emo7': 'It\'s okay to be afraid',
-            'cpfq_emo8': 'Just because I think something, it doesn\'t mean it\'s true',
-            'cpfq_emo9': 'Sometimes I don\'t notice what\'s happening around me or what people say',
-            'cpfq_emo10': 'My thoughts do not control what I do',
-            'cpfq_emo11': 'It\'s okay to feel angry',
-            'cpfq_emo12': 'If I do something bad, it means I\'m a bad person',
-            'cpfq_emo13': 'I often worry about things I have done or have to do',
-            'cpfq_emo14': 'I notice when my body feels different',
-            'cpfq_emo15': 'If I get angry, it means I\'ve ruined things',
-            'cpfq_emo16': 'My thoughts and feelings tell me what I should do',
-            'cpfq_emo17': 'I am what others say I am',
-            'cpfq_emo18': 'Adults tell me what is important for me'
-        }
-
-        # Get factor loadings and sort by absolute values
-        factor1_pos = [(col, val) for col, val in loadings['Factor1'].items() if val > 0.3]
-        factor1_neg = [(col, val) for col, val in loadings['Factor1'].items() if val < -0.3]
-        factor2_pos = [(col, val) for col, val in loadings['Factor2'].items() if val > 0.3]
-        factor2_neg = [(col, val) for col, val in loadings['Factor2'].items() if val < -0.3]
-        factor3_pos = [(col, val) for col, val in loadings['Factor3'].items() if val > 0.3]
-        factor3_neg = [(col, val) for col, val in loadings['Factor3'].items() if val < -0.3]
-        factor4_pos = [(col, val) for col, val in loadings['Factor4'].items() if val > 0.3]
-        factor4_neg = [(col, val) for col, val in loadings['Factor4'].items() if val < -0.3]
-
-        # Sort by absolute loading value
-        for items in [factor1_pos, factor1_neg, factor2_pos, factor2_neg, 
-                     factor3_pos, factor3_neg, factor4_pos, factor4_neg]:
-            items.sort(key=lambda x: abs(x[1]), reverse=True)
-
+        # Add factor interpretations
         results.append('\nFactor Interpretations:')
-        results.append('===================')
+        results.append('===================\n')
+        
+        # Factor 1 - Sort and organize loadings
+        f1_positive = loadings[loadings['Factor1'] > 0.3]['Factor1'].sort_values(ascending=False)
+        f1_negative = loadings[loadings['Factor1'] < -0.3]['Factor1'].sort_values()
+        
+        # Factor 2 - Sort and organize loadings
+        f2_positive = loadings[loadings['Factor2'] > 0.3]['Factor2'].sort_values(ascending=False)
+        f2_negative = loadings[loadings['Factor2'] < -0.3]['Factor2'].sort_values()
+        
+        # Factor 3 - Sort and organize loadings
+        f3_positive = loadings[loadings['Factor3'] > 0.3]['Factor3'].sort_values(ascending=False)
+        f3_negative = loadings[loadings['Factor3'] < -0.3]['Factor3'].sort_values()
         
         # Factor 1
-        results.append('\nFactor 1 - "Self-Judgment & Experiential Avoidance" (36.36% of variance)')
-        results.append('This factor represents fusion with self-critical thoughts (highest loading |0.883| for "If I do something bad, it means I\'m a bad person") and emotional avoidance (|0.857| for "If I get angry, it means I\'ve ruined things"), contrasting with mindful awareness (|-0.770| for "I notice when my body feels different").')
-        results.append('Strong positive indicators (sorted by loading strength):')
-        for item, loading in factor1_pos:
-            results.append(format_loading(item, loading))
-        results.append('Strong negative indicators (sorted by loading strength):')
-        for item, loading in factor1_neg:
-            results.append(format_loading(item, loading))
+        results.append(f'Factor 1 - "Experiential Avoidance vs. Psychological Fusion" ({var_exp[0]:.2f}% of variance):')
+        results.append('This factor represents the continuum between experiential avoidance (avoiding uncomfortable thoughts/feelings) and psychological fusion (overidentification with thoughts).')
+        results.append('All significant loadings (|loading| > 0.3) in descending order by absolute magnitude:')
+        
+        # List negative loadings for Factor 1
+        results.append('\nNegative loadings (experiential avoidance):')
+        for item, value in f1_negative.items():
+            results.append(f'- {item}: {value:.2f}')
+        
+        # List positive loadings for Factor 1
+        results.append('\nPositive loadings (psychological fusion):')
+        for item, value in f1_positive.items():
+            results.append(f'- {item}: {value:.2f}')
         
         # Factor 2
-        results.append('\nFactor 2 - "Values-Based Action" (18.38% of variance)')
-        results.append('This factor strongly represents committed action (|0.909| for "When I fail, I try again", |0.809| for "I try my best every day"), contrasting with external control (|-0.794| for "Adults tell me what is important for me").')
-        results.append('Strong positive indicators (sorted by loading strength):')
-        for item, loading in factor2_pos:
-            results.append(format_loading(item, loading))
-        results.append('Strong negative indicators (sorted by loading strength):')
-        for item, loading in factor2_neg:
-            results.append(format_loading(item, loading))
+        results.append(f'\n\nFactor 2 - "Committed Action" ({var_exp[1]:.2f}% of variance):')
+        results.append('This factor represents persistence, effort, and goal-directed behavior aligned with personal values.')
+        results.append('All significant loadings (|loading| > 0.3) in descending order by absolute magnitude:')
+        
+        # List positive loadings for Factor 2
+        results.append('\nPositive loadings (committed action):')
+        for item, value in f2_positive.items():
+            results.append(f'- {item}: {value:.2f}')
+        
+        # List negative loadings for Factor 2
+        if not f2_negative.empty:
+            results.append('\nNegative loadings:')
+            for item, value in f2_negative.items():
+                results.append(f'- {item}: {value:.2f}')
         
         # Factor 3
-        results.append('\nFactor 3 - "Cognitive Defusion" (9.71% of variance)')
-        results.append('This factor primarily represents cognitive defusion (strongest negative loading |-0.876| for "My thoughts do not control what I do"), with positive loadings on experiential connection (|0.553| for "Nothing feels important to me" reversed).')
-        results.append('Strong positive indicators (sorted by loading strength):')
-        for item, loading in factor3_pos:
-            results.append(format_loading(item, loading))
-        if factor3_neg:
-            results.append('Strong negative indicators (sorted by loading strength):')
-            for item, loading in factor3_neg:
-                results.append(format_loading(item, loading))
+        results.append(f'\n\nFactor 3 - "Present Moment Awareness and Values" ({var_exp[2]:.2f}% of variance):')
+        results.append('This factor represents mindful awareness of the present moment and connection with personal values.')
+        results.append('All significant loadings (|loading| > 0.3) in descending order by absolute magnitude:')
         
-        # Factor 4
-        results.append('\nFactor 4 - "Emotional Acceptance & Present Moment" (5.67% of variance)')
-        results.append('This factor represents emotional acceptance (|0.776| for "It\'s okay to feel angry", |0.537| for "It\'s okay to be afraid") and values connection (|0.742| for "There are things I really care about"), contrasting with mindlessness (|-0.737| for "Sometimes I don\'t notice what\'s happening around me").')
-        results.append('Strong positive indicators (sorted by loading strength):')
-        for item, loading in factor4_pos:
-            results.append(format_loading(item, loading))
-        results.append('Strong negative indicators (sorted by loading strength):')
-        for item, loading in factor4_neg:
-            results.append(format_loading(item, loading))
+        # List positive loadings for Factor 3
+        results.append('\nPositive loadings (awareness and values):')
+        for item, value in f3_positive.items():
+            results.append(f'- {item}: {value:.2f}')
         
-        factor_text = '\n'.join(results)
+        # List negative loadings for Factor 3
+        if not f3_negative.empty:
+            results.append('\nNegative loadings:')
+            for item, value in f3_negative.items():
+                results.append(f'- {item}: {value:.2f}')        
         
-        return factor_text
+        results.append('\n')
+        
+        # Create visualizations
+        # Factor loadings heatmap
+        plt.figure(figsize=(12, 8))
+        sns.heatmap(loadings, annot=True, cmap=HEATMAP_PALETTE, center=0, vmin=-1, vmax=1)
+        plt.title('Factor Loadings Heatmap', fontsize=14)
+        plt.xlabel('Factors', fontsize=12)
+        plt.ylabel('Items', fontsize=12)
+        plt.tight_layout()
+        plt.savefig(os.path.join(RESULTS_DIR, 'factor_loadings_heatmap.png'))
+        plt.close()
+        
+        # Factor importance plot showing variance explained
+        create_factor_importance_plot(fa)
+        
+        # Join all results into a single string
+        return '\n'.join(results)
     except Exception as e:
         print(f'Error in factor analysis: {str(e)}')
         return None
@@ -586,7 +576,7 @@ def main() -> None:
             f"{missing_analysis}\n\n"
             f"{kmo_analysis}\n\n"
             f"{bartlett_analysis}\n\n"
-            f"{fa_results}"
+            f"{fa_results}\n"
         )
         
         # Save results

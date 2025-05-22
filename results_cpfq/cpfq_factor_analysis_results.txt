@@ -1,7 +1,7 @@
 CPFQ Factor Analysis Results
 ===========================
 
-Generated on: 2025-05-22 10:40:33.182348
+Generated on: 2025-05-22 14:36:59.286707
 
 Missing Values Analysis
 ==================================================
@@ -12,20 +12,11 @@ cpfq_1                   0             645        0.0                  645
 cpfq_2                   2             645        0.3                  643
 cpfq_3                   2             645        0.3                  643
 cpfq_4                   6             645        0.9                  639
-cpfq_5_rev               7             645        1.1                  638
-cpfq_6_rev              11             645        1.7                  634
 cpfq_7                   6             645        0.9                  639
-cpfq_8                   6             645        0.9                  639
-cpfq_9_rev               4             645        0.6                  641
-cpfq_10                  7             645        1.1                  638
 cpfq_11                 13             645        2.0                  632
 cpfq_12_rev              7             645        1.1                  638
 cpfq_13_rev              8             645        1.2                  637
-cpfq_14                  7             645        1.1                  638
 cpfq_15_rev             11             645        1.7                  634
-cpfq_16_rev              5             645        0.8                  640
-cpfq_17_rev              4             645        0.6                  641
-cpfq_18_rev              4             645        0.6                  641
 
 2. Pairwise Complete Cases Analysis:
 
@@ -34,285 +25,124 @@ cpfq_1 - cpfq_1: 645 responses (100.0%)
 cpfq_1 - cpfq_2: 643 responses (99.7%)
 cpfq_1 - cpfq_3: 643 responses (99.7%)
 cpfq_1 - cpfq_4: 639 responses (99.1%)
-cpfq_1 - cpfq_5_rev: 638 responses (98.9%)
-cpfq_1 - cpfq_6_rev: 634 responses (98.3%)
 cpfq_1 - cpfq_7: 639 responses (99.1%)
-cpfq_1 - cpfq_8: 639 responses (99.1%)
-cpfq_1 - cpfq_9_rev: 641 responses (99.4%)
-cpfq_1 - cpfq_10: 638 responses (98.9%)
 cpfq_1 - cpfq_11: 632 responses (98.0%)
 cpfq_1 - cpfq_12_rev: 638 responses (98.9%)
 cpfq_1 - cpfq_13_rev: 637 responses (98.8%)
-cpfq_1 - cpfq_14: 638 responses (98.9%)
 cpfq_1 - cpfq_15_rev: 634 responses (98.3%)
-cpfq_1 - cpfq_16_rev: 640 responses (99.2%)
-cpfq_1 - cpfq_17_rev: 641 responses (99.4%)
-cpfq_1 - cpfq_18_rev: 641 responses (99.4%)
 cpfq_2 - cpfq_2: 643 responses (99.7%)
 cpfq_2 - cpfq_3: 641 responses (99.4%)
 cpfq_2 - cpfq_4: 637 responses (98.8%)
-cpfq_2 - cpfq_5_rev: 636 responses (98.6%)
-cpfq_2 - cpfq_6_rev: 632 responses (98.0%)
 cpfq_2 - cpfq_7: 637 responses (98.8%)
-cpfq_2 - cpfq_8: 637 responses (98.8%)
-cpfq_2 - cpfq_9_rev: 639 responses (99.1%)
-cpfq_2 - cpfq_10: 636 responses (98.6%)
 cpfq_2 - cpfq_11: 630 responses (97.7%)
 cpfq_2 - cpfq_12_rev: 636 responses (98.6%)
 cpfq_2 - cpfq_13_rev: 635 responses (98.4%)
-cpfq_2 - cpfq_14: 636 responses (98.6%)
 cpfq_2 - cpfq_15_rev: 632 responses (98.0%)
-cpfq_2 - cpfq_16_rev: 638 responses (98.9%)
-cpfq_2 - cpfq_17_rev: 639 responses (99.1%)
-cpfq_2 - cpfq_18_rev: 639 responses (99.1%)
 cpfq_3 - cpfq_3: 643 responses (99.7%)
 cpfq_3 - cpfq_4: 637 responses (98.8%)
-cpfq_3 - cpfq_5_rev: 636 responses (98.6%)
-cpfq_3 - cpfq_6_rev: 632 responses (98.0%)
 cpfq_3 - cpfq_7: 637 responses (98.8%)
-cpfq_3 - cpfq_8: 637 responses (98.8%)
-cpfq_3 - cpfq_9_rev: 639 responses (99.1%)
-cpfq_3 - cpfq_10: 636 responses (98.6%)
 cpfq_3 - cpfq_11: 630 responses (97.7%)
 cpfq_3 - cpfq_12_rev: 636 responses (98.6%)
 cpfq_3 - cpfq_13_rev: 635 responses (98.4%)
-cpfq_3 - cpfq_14: 636 responses (98.6%)
 cpfq_3 - cpfq_15_rev: 632 responses (98.0%)
-cpfq_3 - cpfq_16_rev: 638 responses (98.9%)
-cpfq_3 - cpfq_17_rev: 639 responses (99.1%)
-cpfq_3 - cpfq_18_rev: 639 responses (99.1%)
 cpfq_4 - cpfq_4: 639 responses (99.1%)
-cpfq_4 - cpfq_5_rev: 632 responses (98.0%)
-cpfq_4 - cpfq_6_rev: 628 responses (97.4%)
 cpfq_4 - cpfq_7: 633 responses (98.1%)
-cpfq_4 - cpfq_8: 634 responses (98.3%)
-cpfq_4 - cpfq_9_rev: 635 responses (98.4%)
-cpfq_4 - cpfq_10: 632 responses (98.0%)
 cpfq_4 - cpfq_11: 626 responses (97.1%)
 cpfq_4 - cpfq_12_rev: 632 responses (98.0%)
 cpfq_4 - cpfq_13_rev: 631 responses (97.8%)
-cpfq_4 - cpfq_14: 633 responses (98.1%)
 cpfq_4 - cpfq_15_rev: 628 responses (97.4%)
-cpfq_4 - cpfq_16_rev: 634 responses (98.3%)
-cpfq_4 - cpfq_17_rev: 635 responses (98.4%)
-cpfq_4 - cpfq_18_rev: 635 responses (98.4%)
-cpfq_5_rev - cpfq_5_rev: 638 responses (98.9%)
-cpfq_5_rev - cpfq_6_rev: 628 responses (97.4%)
-cpfq_5_rev - cpfq_7: 632 responses (98.0%)
-cpfq_5_rev - cpfq_8: 632 responses (98.0%)
-cpfq_5_rev - cpfq_9_rev: 634 responses (98.3%)
-cpfq_5_rev - cpfq_10: 631 responses (97.8%)
-cpfq_5_rev - cpfq_11: 625 responses (96.9%)
-cpfq_5_rev - cpfq_12_rev: 631 responses (97.8%)
-cpfq_5_rev - cpfq_13_rev: 631 responses (97.8%)
-cpfq_5_rev - cpfq_14: 631 responses (97.8%)
-cpfq_5_rev - cpfq_15_rev: 627 responses (97.2%)
-cpfq_5_rev - cpfq_16_rev: 633 responses (98.1%)
-cpfq_5_rev - cpfq_17_rev: 634 responses (98.3%)
-cpfq_5_rev - cpfq_18_rev: 634 responses (98.3%)
-cpfq_6_rev - cpfq_6_rev: 634 responses (98.3%)
-cpfq_6_rev - cpfq_7: 628 responses (97.4%)
-cpfq_6_rev - cpfq_8: 628 responses (97.4%)
-cpfq_6_rev - cpfq_9_rev: 630 responses (97.7%)
-cpfq_6_rev - cpfq_10: 627 responses (97.2%)
-cpfq_6_rev - cpfq_11: 621 responses (96.3%)
-cpfq_6_rev - cpfq_12_rev: 627 responses (97.2%)
-cpfq_6_rev - cpfq_13_rev: 627 responses (97.2%)
-cpfq_6_rev - cpfq_14: 627 responses (97.2%)
-cpfq_6_rev - cpfq_15_rev: 623 responses (96.6%)
-cpfq_6_rev - cpfq_16_rev: 629 responses (97.5%)
-cpfq_6_rev - cpfq_17_rev: 630 responses (97.7%)
-cpfq_6_rev - cpfq_18_rev: 630 responses (97.7%)
 cpfq_7 - cpfq_7: 639 responses (99.1%)
-cpfq_7 - cpfq_8: 633 responses (98.1%)
-cpfq_7 - cpfq_9_rev: 635 responses (98.4%)
-cpfq_7 - cpfq_10: 632 responses (98.0%)
 cpfq_7 - cpfq_11: 626 responses (97.1%)
 cpfq_7 - cpfq_12_rev: 632 responses (98.0%)
 cpfq_7 - cpfq_13_rev: 631 responses (97.8%)
-cpfq_7 - cpfq_14: 632 responses (98.0%)
 cpfq_7 - cpfq_15_rev: 628 responses (97.4%)
-cpfq_7 - cpfq_16_rev: 634 responses (98.3%)
-cpfq_7 - cpfq_17_rev: 635 responses (98.4%)
-cpfq_7 - cpfq_18_rev: 635 responses (98.4%)
-cpfq_8 - cpfq_8: 639 responses (99.1%)
-cpfq_8 - cpfq_9_rev: 635 responses (98.4%)
-cpfq_8 - cpfq_10: 632 responses (98.0%)
-cpfq_8 - cpfq_11: 626 responses (97.1%)
-cpfq_8 - cpfq_12_rev: 632 responses (98.0%)
-cpfq_8 - cpfq_13_rev: 632 responses (98.0%)
-cpfq_8 - cpfq_14: 632 responses (98.0%)
-cpfq_8 - cpfq_15_rev: 629 responses (97.5%)
-cpfq_8 - cpfq_16_rev: 634 responses (98.3%)
-cpfq_8 - cpfq_17_rev: 637 responses (98.8%)
-cpfq_8 - cpfq_18_rev: 636 responses (98.6%)
-cpfq_9_rev - cpfq_9_rev: 641 responses (99.4%)
-cpfq_9_rev - cpfq_10: 634 responses (98.3%)
-cpfq_9_rev - cpfq_11: 628 responses (97.4%)
-cpfq_9_rev - cpfq_12_rev: 634 responses (98.3%)
-cpfq_9_rev - cpfq_13_rev: 633 responses (98.1%)
-cpfq_9_rev - cpfq_14: 634 responses (98.3%)
-cpfq_9_rev - cpfq_15_rev: 630 responses (97.7%)
-cpfq_9_rev - cpfq_16_rev: 636 responses (98.6%)
-cpfq_9_rev - cpfq_17_rev: 637 responses (98.8%)
-cpfq_9_rev - cpfq_18_rev: 637 responses (98.8%)
-cpfq_10 - cpfq_10: 638 responses (98.9%)
-cpfq_10 - cpfq_11: 625 responses (96.9%)
-cpfq_10 - cpfq_12_rev: 632 responses (98.0%)
-cpfq_10 - cpfq_13_rev: 630 responses (97.7%)
-cpfq_10 - cpfq_14: 631 responses (97.8%)
-cpfq_10 - cpfq_15_rev: 628 responses (97.4%)
-cpfq_10 - cpfq_16_rev: 633 responses (98.1%)
-cpfq_10 - cpfq_17_rev: 634 responses (98.3%)
-cpfq_10 - cpfq_18_rev: 634 responses (98.3%)
 cpfq_11 - cpfq_11: 632 responses (98.0%)
 cpfq_11 - cpfq_12_rev: 626 responses (97.1%)
 cpfq_11 - cpfq_13_rev: 624 responses (96.7%)
-cpfq_11 - cpfq_14: 625 responses (96.9%)
 cpfq_11 - cpfq_15_rev: 621 responses (96.3%)
-cpfq_11 - cpfq_16_rev: 627 responses (97.2%)
-cpfq_11 - cpfq_17_rev: 628 responses (97.4%)
-cpfq_11 - cpfq_18_rev: 628 responses (97.4%)
 cpfq_12_rev - cpfq_12_rev: 638 responses (98.9%)
 cpfq_12_rev - cpfq_13_rev: 630 responses (97.7%)
-cpfq_12_rev - cpfq_14: 631 responses (97.8%)
 cpfq_12_rev - cpfq_15_rev: 628 responses (97.4%)
-cpfq_12_rev - cpfq_16_rev: 633 responses (98.1%)
-cpfq_12_rev - cpfq_17_rev: 634 responses (98.3%)
-cpfq_12_rev - cpfq_18_rev: 634 responses (98.3%)
 cpfq_13_rev - cpfq_13_rev: 637 responses (98.8%)
-cpfq_13_rev - cpfq_14: 631 responses (97.8%)
 cpfq_13_rev - cpfq_15_rev: 628 responses (97.4%)
-cpfq_13_rev - cpfq_16_rev: 633 responses (98.1%)
-cpfq_13_rev - cpfq_17_rev: 634 responses (98.3%)
-cpfq_13_rev - cpfq_18_rev: 634 responses (98.3%)
-cpfq_14 - cpfq_14: 638 responses (98.9%)
-cpfq_14 - cpfq_15_rev: 628 responses (97.4%)
-cpfq_14 - cpfq_16_rev: 634 responses (98.3%)
-cpfq_14 - cpfq_17_rev: 635 responses (98.4%)
-cpfq_14 - cpfq_18_rev: 635 responses (98.4%)
 cpfq_15_rev - cpfq_15_rev: 634 responses (98.3%)
-cpfq_15_rev - cpfq_16_rev: 630 responses (97.7%)
-cpfq_15_rev - cpfq_17_rev: 631 responses (97.8%)
-cpfq_15_rev - cpfq_18_rev: 631 responses (97.8%)
-cpfq_16_rev - cpfq_16_rev: 640 responses (99.2%)
-cpfq_16_rev - cpfq_17_rev: 637 responses (98.8%)
-cpfq_16_rev - cpfq_18_rev: 637 responses (98.8%)
-cpfq_17_rev - cpfq_17_rev: 641 responses (99.4%)
-cpfq_17_rev - cpfq_18_rev: 639 responses (99.1%)
-cpfq_18_rev - cpfq_18_rev: 641 responses (99.4%)
 
 Summary Statistics:
 Minimum pairs: 621
 Maximum pairs: 645
-Average pairs: 633
+Average pairs: 634
 Median pairs: 634
 
-Overall KMO score: 0.821
+Overall KMO score: 0.739
 
 KMO scores for each variable:
-cpfq_1: 0.768
-cpfq_2: 0.717
-cpfq_3: 0.829
-cpfq_4: 0.815
-cpfq_5_rev: 0.785
-cpfq_6_rev: 0.725
-cpfq_7: 0.844
-cpfq_8: 0.889
-cpfq_9_rev: 0.837
-cpfq_10: 0.691
-cpfq_11: 0.828
-cpfq_12_rev: 0.885
-cpfq_13_rev: 0.832
-cpfq_14: 0.868
-cpfq_15_rev: 0.814
-cpfq_16_rev: 0.829
-cpfq_17_rev: 0.876
-cpfq_18_rev: 0.752
+cpfq_1: 0.633
+cpfq_2: 0.630
+cpfq_3: 0.762
+cpfq_4: 0.747
+cpfq_7: 0.692
+cpfq_11: 0.707
+cpfq_12_rev: 0.833
+cpfq_13_rev: 0.797
+cpfq_15_rev: 0.791
 
 Bartlett's test of sphericity:
-Chi-square: 2243.64
+Chi-square: 1213.23
 p-value: 0.0000000000
 
 Factor Loadings:
-              Factor1   Factor2   Factor3   Factor4
-cpfq_1      -0.010037  0.809484  0.060613  0.041184
-cpfq_2       0.002491  0.909136  0.014625 -0.035594
-cpfq_3       0.113741  0.346253  0.099046  0.742018
-cpfq_4      -0.157412  0.576501  0.327190  0.354100
-cpfq_5_rev   0.353658  0.566778  0.152337 -0.204487
-cpfq_6_rev   0.350026  0.162056  0.552984  0.398583
-cpfq_7      -0.441679 -0.028761  0.053538  0.536813
-cpfq_8      -0.415737  0.089570 -0.229927  0.432519
-cpfq_9_rev   0.102692  0.193021  0.357882 -0.737212
-cpfq_10      0.046579  0.138937 -0.875711  0.192947
-cpfq_11     -0.204714 -0.076082 -0.036700  0.776409
-cpfq_12_rev  0.883425 -0.083025 -0.006300  0.172735
-cpfq_13_rev  0.709980  0.072873 -0.039352 -0.314488
-cpfq_14     -0.770103  0.119187  0.105808  0.144376
-cpfq_15_rev  0.856693  0.062454  0.097503  0.002476
-cpfq_16_rev  0.389183 -0.282078 -0.330972 -0.407918
-cpfq_17_rev  0.344598 -0.513203  0.180626 -0.042045
-cpfq_18_rev  0.078831 -0.793679  0.418507  0.038572
+              Factor1   Factor2   Factor3
+cpfq_1      -0.094828  0.928047 -0.041836
+cpfq_2       0.065858  0.894305  0.102954
+cpfq_3      -0.083862 -0.134237  0.883423
+cpfq_4       0.057257  0.202365  0.805766
+cpfq_7      -0.996121 -0.042628 -0.142849
+cpfq_11     -0.822459 -0.333038  0.118659
+cpfq_12_rev  0.553803 -0.220012 -0.234623
+cpfq_13_rev  0.759686 -0.198730 -0.224729
+cpfq_15_rev  0.798363 -0.247301 -0.045460
 
 Variance Explained (%):
-         Eigenvalue  Proportion of Variance  Cumulative Variance
-Factor1    6.544895               36.360526            36.360526
-Factor2    3.307709               18.376162            54.736688
-Factor3    1.748377                9.713204            64.449891
-Factor4    1.020339                5.668551            70.118442
+   Eigenvalue  Proportion of Variance  Cumulative Variance
+0    4.324295               35.705994            35.705994
+1    2.024288               22.020125            57.726119
+2    0.820869               17.601667            75.327786
 
 Factor Interpretations:
 ===================
 
-Factor 1 - "Self-Judgment & Experiential Avoidance" (36.36% of variance)
-This factor represents fusion with self-critical thoughts (highest loading |0.883| for "If I do something bad, it means I'm a bad person") and emotional avoidance (|0.857| for "If I get angry, it means I've ruined things"), contrasting with mindful awareness (|-0.770| for "I notice when my body feels different").
-Strong positive indicators (sorted by loading strength):
-- cpfq_12_rev (|0.883|): 0.883 - "If I do something bad, it means I'm a bad person"
-- cpfq_15_rev (|0.857|): 0.857 - "If I get angry, it means I've ruined things"
-- cpfq_13_rev (|0.710|): 0.710 - "I often worry about things I have done or have to do"
-- cpfq_16_rev (|0.389|): 0.389 - "My thoughts and feelings tell me what I should do"
-- cpfq_5_rev (|0.354|): 0.354 - "I give up when things are too hard"
-- cpfq_6_rev (|0.350|): 0.350 - "Nothing feels important to me"
-- cpfq_17_rev (|0.345|): 0.345 - "I am what others say I am"
-Strong negative indicators (sorted by loading strength):
-- cpfq_14 (|0.770|): -0.770 - "I notice when my body feels different"
-- cpfq_7 (|0.442|): -0.442 - "It's okay to be afraid"
-- cpfq_8 (|0.416|): -0.416 - "Just because I think something, it doesn't mean it's true"
+Factor 1 - "Experiential Avoidance vs. Psychological Fusion" (35.71% of variance):
+This factor represents the continuum between experiential avoidance (avoiding uncomfortable thoughts/feelings) and psychological fusion (overidentification with thoughts).
+All significant loadings (|loading| > 0.3) in descending order by absolute magnitude:
 
-Factor 2 - "Values-Based Action" (18.38% of variance)
-This factor strongly represents committed action (|0.909| for "When I fail, I try again", |0.809| for "I try my best every day"), contrasting with external control (|-0.794| for "Adults tell me what is important for me").
-Strong positive indicators (sorted by loading strength):
-- cpfq_2 (|0.909|): 0.909 - "When I fail, I try again so that I can do better"
-- cpfq_1 (|0.809|): 0.809 - "I try my best every day"
-- cpfq_4 (|0.577|): 0.577 - "I notice what I think and feel"
-- cpfq_5_rev (|0.567|): 0.567 - "I give up when things are too hard"
-- cpfq_3 (|0.346|): 0.346 - "There are things I really care about"
-Strong negative indicators (sorted by loading strength):
-- cpfq_18_rev (|0.794|): -0.794 - "Adults tell me what is important for me"
-- cpfq_17_rev (|0.513|): -0.513 - "I am what others say I am"
+Negative loadings (experiential avoidance):
+- cpfq_7: -1.00
+- cpfq_11: -0.82
 
-Factor 3 - "Cognitive Defusion" (9.71% of variance)
-This factor primarily represents cognitive defusion (strongest negative loading |-0.876| for "My thoughts do not control what I do"), with positive loadings on experiential connection (|0.553| for "Nothing feels important to me" reversed).
-Strong positive indicators (sorted by loading strength):
-- cpfq_6_rev (|0.553|): 0.553 - "Nothing feels important to me"
-- cpfq_18_rev (|0.419|): 0.419 - "Adults tell me what is important for me"
-- cpfq_9_rev (|0.358|): 0.358 - "Sometimes I don't notice what's happening around me or what people say"
-- cpfq_4 (|0.327|): 0.327 - "I notice what I think and feel"
-Strong negative indicators (sorted by loading strength):
-- cpfq_10 (|0.876|): -0.876 - "My thoughts do not control what I do"
-- cpfq_16_rev (|0.331|): -0.331 - "My thoughts and feelings tell me what I should do"
+Positive loadings (psychological fusion):
+- cpfq_15_rev: 0.80
+- cpfq_13_rev: 0.76
+- cpfq_12_rev: 0.55
 
-Factor 4 - "Emotional Acceptance & Present Moment" (5.67% of variance)
-This factor represents emotional acceptance (|0.776| for "It's okay to feel angry", |0.537| for "It's okay to be afraid") and values connection (|0.742| for "There are things I really care about"), contrasting with mindlessness (|-0.737| for "Sometimes I don't notice what's happening around me").
-Strong positive indicators (sorted by loading strength):
-- cpfq_11 (|0.776|): 0.776 - "It's okay to feel angry"
-- cpfq_3 (|0.742|): 0.742 - "There are things I really care about"
-- cpfq_7 (|0.537|): 0.537 - "It's okay to be afraid"
-- cpfq_8 (|0.433|): 0.433 - "Just because I think something, it doesn't mean it's true"
-- cpfq_6_rev (|0.399|): 0.399 - "Nothing feels important to me"
-- cpfq_4 (|0.354|): 0.354 - "I notice what I think and feel"
-Strong negative indicators (sorted by loading strength):
-- cpfq_9_rev (|0.737|): -0.737 - "Sometimes I don't notice what's happening around me or what people say"
-- cpfq_16_rev (|0.408|): -0.408 - "My thoughts and feelings tell me what I should do"
-- cpfq_13_rev (|0.314|): -0.314 - "I often worry about things I have done or have to do"
+
+Factor 2 - "Committed Action" (22.02% of variance):
+This factor represents persistence, effort, and goal-directed behavior aligned with personal values.
+All significant loadings (|loading| > 0.3) in descending order by absolute magnitude:
+
+Positive loadings (committed action):
+- cpfq_1: 0.93
+- cpfq_2: 0.89
+
+Negative loadings:
+- cpfq_11: -0.33
+
+
+Factor 3 - "Present Moment Awareness and Values" (17.60% of variance):
+This factor represents mindful awareness of the present moment and connection with personal values.
+All significant loadings (|loading| > 0.3) in descending order by absolute magnitude:
+
+Positive loadings (awareness and values):
+- cpfq_3: 0.88
+- cpfq_4: 0.81
+
+

@@ -118,12 +118,15 @@ def plot_parallel_analysis(actual_evals: np.ndarray, random_evals: np.ndarray,
     plt.plot(factor_numbers, actual_evals, 'o-', color='blue', 
              label=f'Actual Data Eigenvalues')
     
+    # Add line at eigenvalue = 1
+    plt.axhline(y=1, color='gray', linestyle='--', alpha=0.5, label='Eigenvalue = 1')
+    
     # Plot random eigenvalues
     plt.plot(factor_numbers, random_evals, 's--', color='red', 
              label=f'{PERCENTILE}th Percentile of Random Eigenvalues')
     
-    # Find where actual > random (suggested factors to retain)
-    factors_to_retain = sum(actual_evals > random_evals)
+    # Count factors where actual eigenvalues > 1
+    factors_to_retain = sum(actual_evals > 1)
     
     # Draw a vertical line at the suggested cut-off
     if factors_to_retain > 0:
@@ -182,12 +185,12 @@ def perform_parallel_analysis(data: pd.DataFrame) -> Tuple[int, str]:
     
     results.append("Eigenvalues Comparison:")
     results.append("-----------------------")
-    results.append(f"{'Factor':<8}{'Actual EV':<15}{'Random EV':<15}{'Difference':<15}{'Retain':<10}")
-    results.append("-" * 60)
+    results.append(f"{'Factor':<8}{'Actual EV':<15}{'Retain':<10}")
+    results.append("-" * 35)
     
-    for i, (actual, random) in enumerate(zip(actual_evals, random_evals)):
-        retain = "Yes" if actual > random else "No"
-        results.append(f"{i+1:<8}{actual:<15.4f}{random:<15.4f}{actual-random:<15.4f}{retain:<10}")
+    for i, actual in enumerate(actual_evals):
+        retain = "Yes" if actual > 1 else "No"
+        results.append(f"{i+1:<8}{actual:<15.4f}{retain:<10}")
     
     results.append("\nSuggested number of factors to retain: " + str(factors_to_retain))
     
